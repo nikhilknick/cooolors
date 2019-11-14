@@ -17,7 +17,6 @@ export default class ColorBox extends Component {
         this.setState({copied:false})
       }, 1500);
     });
-    console.log('copied');
   }
   render() {
     const { name, background } = this.props;
