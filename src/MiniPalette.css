@@ -1,0 +1,8 @@
+.PaletteBox{
+    background: rgb(76, 0, 255);
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    color: white;
+    text-align: center;
+}
