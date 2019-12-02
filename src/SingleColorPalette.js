@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "./Navbar";
 import ColorBox from "./ColorBox";
+import PaletteFooter from './PaletteFooter';
 
 
 export default class SingleColorPalette extends Component {
@@ -32,11 +33,12 @@ export default class SingleColorPalette extends Component {
   }
 
   render() {
+    const {format} = this.state;
     const colorBoxes = this._shades.map((color, index) => (
       <ColorBox
         key={index}
         name={color.name}
-        background={color[this.state.format]}
+        background={color[format]}
         showLink={false}
       />
     ));
@@ -47,10 +49,7 @@ export default class SingleColorPalette extends Component {
         <div className='Palette-colors'>{colorBoxes}</div>
         
         <button onClick={this.handleBack}>Go bk</button>
-        <footer className="Palette-footer">
-          {paletteName}
-          <span className="emoji">{emoji}</span>
-        </footer>
+        <PaletteFooter paletteName={paletteName} emoji={emoji}/>
       </div>
     );
   }
