@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navbar from "./Navbar";
 import ColorBox from "./ColorBox";
 
+
 export default class SingleColorPalette extends Component {
   constructor(props) {
     super(props);
@@ -39,12 +40,17 @@ export default class SingleColorPalette extends Component {
         showLink={false}
       />
     ));
+    const {paletteName, emoji} = this.props.palette;
     return (
       <div className="Palette">
         <Navbar showSlider={false} handleChange={this.changeFormat}/>
         <div className='Palette-colors'>{colorBoxes}</div>
         
         <button onClick={this.handleBack}>Go bk</button>
+        <footer className="Palette-footer">
+          {paletteName}
+          <span className="emoji">{emoji}</span>
+        </footer>
       </div>
     );
   }
