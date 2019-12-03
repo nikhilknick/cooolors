@@ -1,11 +1,13 @@
 .PaletteList {
-  width: 700px;
+  width: 800px;
   margin: 0 auto;
+  margin-top:10px;
+  margin-bottom:10px;
 }
 
 .List {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 15px;
+  grid-gap: 25px;
   grid-auto-rows: minmax(100px, auto);
 }

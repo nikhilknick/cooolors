@@ -10,7 +10,7 @@ export default class PaletteList extends Component {
     const { palettes } = this.props;
     return (
       <div className="PaletteList">
-        <h1>React Color</h1>
+        <h1>C0L0RS</h1>
         <div className="List">
           {palettes.map((palette,index) => (
             <MiniPalette {...palette} handleClick={()=>this.goToPalette(palette.id)} key={index}/>
